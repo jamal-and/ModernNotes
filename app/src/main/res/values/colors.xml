@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#3e9fd7</color>
+    <color name="colorPrimary">#1f1f1f</color>
+    <color name="colorPrimaryDark">#1f1f1f</color>
+
+
+    <color name="teal_200">#3e9fd7</color>
+    <color name="teal_700">#1f1f1f</color>
+    <color name="black">#FF000000</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    
+    <color name="colorSearchIcon">#fafafa</color>
+    <color name="colorTextHint">#9F9F9F</color>
+    <color name="colorQuickActionBackground">#252525</color>
+    <color name="colorIcon">#fafafa</color>
+    <color name="colorSubTitle">#fafafa</color>
+    <color name="colorDefaultNoteColor">#303030</color>
+    <color name="colorSubTitleText">#fafafa</color>
+    <color name="colorMiscellaneousBackground">#252525</color>
+    <color name="colorNoteColor2">#3e9fd7</color>
+    <color name="colorNoteColor3">#D73E9F</color>
+    <color name="colorNoteColor4">#9FD73E</color>
+    <color name="colorNoteColor5">#fafafa</color>
+    <color name="colorDelete">#ff4329</color>
+    <color name="colorSearchBackground">#282828</color>
+</resources>
