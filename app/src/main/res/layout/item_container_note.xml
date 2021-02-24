@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/_12sdp"
+    android:layout_marginStart="@dimen/_8sdp"
     android:layout_marginTop="@dimen/_12sdp"
     android:background="@drawable/background_note"
 
@@ -44,6 +44,8 @@
         android:fontFamily="@font/poppins"
         android:includeFontPadding="false"
         android:text="SubTitle"
+        android:maxLines="6"
+        android:ellipsize="end"
         android:textColor="@color/colorSubTitleText"
         android:textSize="@dimen/_10ssp" />
     <TextView

@@ -44,8 +44,9 @@
                 app:layout_constraintTop_toTopOf="@id/imageBack"
                 />
             <EditText
+
                 android:id="@+id/inputNoteTitle"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="@dimen/_35sdp"
                 android:layout_marginEnd="@dimen/_12sdp"
                 android:layout_marginStart="@dimen/_12sdp"
@@ -60,6 +61,8 @@
                 android:includeFontPadding="false"
                 android:inputType="text"
                 android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/imageBack"
                 />
             <TextView
@@ -69,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins"
                 android:includeFontPadding="false"
-                android:textColor="@color/colorIcon"
+                android:textColor="@color/colorTextHint"
                 android:textSize="@dimen/_10ssp"
                 app:layout_constraintEnd_toEndOf="@id/inputNoteTitle"
                 app:layout_constraintStart_toStartOf="@id/inputNoteTitle"
@@ -88,6 +91,7 @@
                 android:fontFamily="@font/poppins_medium"
                 android:hint="@string/note_subtitle"
                 android:importantForAutofill="no"
+                android:visibility="gone"
                 android:includeFontPadding="false"
                 android:inputType="textMultiLine"
                 android:paddingTop="@dimen/_5sdp"
@@ -96,7 +100,7 @@
                 android:textColorHint="@color/colorTextHint"
                 android:textSize="@dimen/_13ssp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@id/viewSubTitleInticator"
+
                 app:layout_constraintTop_toBottomOf="@id/textDateTime" />
             <View
                 android:id="@+id/viewSubTitleInticator"
@@ -104,8 +108,8 @@
                 android:layout_height="0dp"
                 android:layout_marginStart="@dimen/_12sdp"
                 android:background="@drawable/background_subtitle_indicator"
-                app:layout_constraintBottom_toBottomOf="@id/inputNoteSubTitle"
-                app:layout_constraintTop_toTopOf="@id/inputNoteSubTitle"
+                app:layout_constraintBottom_toBottomOf="@id/inputeNote"
+                app:layout_constraintTop_toTopOf="@id/inputeNote"
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <ImageView
@@ -170,8 +174,8 @@
 
             <EditText
                 android:id="@+id/inputeNote"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/_12sdp"
                 android:layout_marginEnd="@dimen/_12sdp"
                 android:layout_marginTop="@dimen/_15sdp"
@@ -183,10 +187,12 @@
                 android:importantForAutofill="no"
                 android:includeFontPadding="false"
                 android:inputType="textMultiLine"
-                android:minHeight="@dimen/_100sdp"
+                android:minHeight="@dimen/_200sdp"
                 android:textColor="@color/colorWhite"
                 android:textColorHint="@color/colorTextHint"
                 android:textSize="@dimen/_13ssp"
+                app:layout_constraintStart_toStartOf="@id/viewSubTitleInticator"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/layoutWebURL"
                 />

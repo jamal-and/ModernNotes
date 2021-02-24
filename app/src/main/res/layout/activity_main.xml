@@ -7,33 +7,38 @@
     android:background="@color/colorPrimary"
     tools:context=".activities.MainActivity">
 
- <TextView
-     android:layout_width="match_parent"
-     android:layout_height="wrap_content"
-     android:layout_marginStart="@dimen/_12sdp"
-     android:layout_marginTop="@dimen/_18sdp"
-     android:layout_marginEnd="@dimen/_12sdp"
-     android:fontFamily="@font/poppins_bold"
+<!-- <TextView-->
 
-     android:includeFontPadding="false"
-     android:text="@string/my_notes"
-     android:textColor="@color/colorAccent"
-     android:textSize="@dimen/_20ssp"
-     app:layout_constraintTop_toTopOf="parent"
-     android:id="@+id/textMyNotes"/>
+<!--     android:layout_width="wrap_content"-->
+<!--     android:layout_height="wrap_content"-->
+<!--     android:layout_marginStart="@dimen/_12sdp"-->
+<!--     android:layout_marginTop="@dimen/_18sdp"-->
+<!--     android:layout_marginEnd="@dimen/_12sdp"-->
+<!--     android:fontFamily="@font/poppins_semibold"-->
+
+<!--     android:includeFontPadding="false"-->
+<!--     android:text="@string/my_notes"-->
+<!--     android:textColor="@color/colorAccent"-->
+<!--     android:textSize="@dimen/_20ssp"-->
+<!--     app:layout_constraintStart_toStartOf="parent"-->
+<!--     app:layout_constraintTop_toTopOf="parent"-->
+<!--     android:id="@+id/textMyNotes"/>-->
     <LinearLayout
         android:id="@+id/layoutSearch"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_8sdp"
-        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_18sdp"
         android:layout_marginEnd="@dimen/_8sdp"
         android:background="@drawable/background_search"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:paddingStart="@dimen/_10sdp"
         android:paddingEnd="@dimen/_10sdp"
-        app:layout_constraintTop_toBottomOf="@+id/textMyNotes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/botomApp"
         >
 
         <ImageView
@@ -62,67 +67,139 @@
             />
 
     </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/notesRecyclerView"
+
+
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/layoutActionBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+
+<!--        android:background="@color/colorQuickActionBackground"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="@dimen/_15sdp"-->
+<!--        android:layout_marginBottom="@dimen/_30sdp"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/botomApp">-->
+<!--        <ImageView-->
+<!--            android:id="@+id/imageAddNote"-->
+<!--            android:layout_width="@dimen/_23sdp"-->
+<!--            android:layout_height="@dimen/_23sdp"-->
+<!--            android:contentDescription="@string/app_name"-->
+<!--            android:src="@drawable/ic_add_outline"-->
+<!--            app:tint="@color/colorIcon"/>-->
+<!--        <ImageView-->
+<!--            android:id="@+id/imageAddImage"-->
+<!--            android:layout_width="@dimen/_23sdp"-->
+<!--            android:layout_height="@dimen/_23sdp"-->
+<!--            android:layout_marginStart="@dimen/_15sdp"-->
+<!--            android:contentDescription="@string/app_name"-->
+<!--            android:src="@drawable/ic_image"-->
+<!--            app:tint="@color/colorIcon"/>-->
+<!--        <ImageView-->
+<!--            android:id="@+id/imageAddWebLink"-->
+<!--            android:layout_width="@dimen/_23sdp"-->
+<!--            android:layout_height="@dimen/_23sdp"-->
+<!--            android:layout_marginStart="@dimen/_15sdp"-->
+<!--            android:contentDescription="@string/app_name"-->
+<!--            android:src="@drawable/ic_web_link"-->
+<!--            app:tint="@color/colorIcon"/>-->
+
+<!--    </LinearLayout>-->
+<!--    <ImageView-->
+<!--        android:id="@+id/imageAddNoteMain"-->
+<!--        android:layout_width="@dimen/_40sdp"-->
+<!--        android:layout_height="@dimen/_40sdp"-->
+<!--        android:background="@drawable/background_add_button"-->
+<!--        android:layout_marginEnd="@dimen/_16sdp"-->
+<!--        android:contentDescription="@string/app_name"-->
+<!--        android:padding="@dimen/_5sdp"-->
+<!--        android:src="@drawable/ic_add"-->
+<!--        app:tint="@color/colorPrimary"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/layoutActionBar"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/layoutActionBar"-->
+<!--        />-->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/botomApp"
         android:layout_width="match_parent"
+
         android:layout_height="0dp"
-        android:layout_marginStart="@dimen/_2sdp"
-        android:layout_marginEnd="@dimen/_2sdp"
-        android:clipToPadding="false"
-        android:paddingStart="0dp"
-        android:paddingEnd="@dimen/_12sdp"
-        android:paddingBottom="@dimen/_12sdp"
-        app:layout_constraintBottom_toTopOf="@id/layoutActionBar"
-        app:layout_constraintTop_toBottomOf="@id/layoutSearch"/>
-
-    <LinearLayout
-        android:id="@+id/layoutActionBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:background="@color/colorQuickActionBackground"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:padding="@dimen/_15sdp"
+        app:layout_constraintTop_toBottomOf="@id/layoutSearch"
         app:layout_constraintBottom_toBottomOf="parent">
-        <ImageView
-            android:id="@+id/imageAddNote"
-            android:layout_width="@dimen/_23sdp"
-            android:layout_height="@dimen/_23sdp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_add_outline"
-            app:tint="@color/colorIcon"/>
-        <ImageView
-            android:id="@+id/imageAddImage"
-            android:layout_width="@dimen/_23sdp"
-            android:layout_height="@dimen/_23sdp"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_image"
-            app:tint="@color/colorIcon"/>
-        <ImageView
-            android:id="@+id/imageAddWebLink"
-            android:layout_width="@dimen/_23sdp"
-            android:layout_height="@dimen/_23sdp"
-            android:layout_marginStart="@dimen/_15sdp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_web_link"
-            app:tint="@color/colorIcon"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:clipToPadding="false"
+            android:paddingStart="0dp"
+            android:paddingEnd="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_62sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
 
-    </LinearLayout>
-    <ImageView
-        android:id="@+id/imageAddNoteMain"
-        android:layout_width="@dimen/_40sdp"
-        android:layout_height="@dimen/_40sdp"
-        android:background="@drawable/background_add_button"
-        android:layout_marginEnd="@dimen/_16sdp"
-        android:contentDescription="@string/app_name"
-        android:padding="@dimen/_5sdp"
-        android:src="@drawable/ic_add"
-        app:tint="@color/colorPrimary"
-        app:layout_constraintBottom_toTopOf="@id/layoutActionBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/layoutActionBar"/>
+            app:layout_constraintTop_toBottomOf="@id/layoutSearch"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/imageAddNoteMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/appBottomBar"
+            android:src="@drawable/ic_add"
+
+            app:fabCustomSize="@dimen/_40sdp"
+            app:maxImageSize="@dimen/_25sdp"
+            app:tint="@color/colorIcon"
+            android:contentDescription="@string/app_name" />
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/appBottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            app:hideOnScroll="true"
+            app:contentInsetStart="0dp"
+            android:layout_gravity="bottom"
+            app:fabAlignmentMode="end"
+            app:fabAnimationMode="scale"
+            android:backgroundTint="@color/colorQuickActionBackground">
+            <LinearLayout
+                android:id="@+id/layoutActionBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/_15sdp"
+
+                >
+                <ImageView
+                    android:id="@+id/imageAddNote"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_add_outline"
+                    app:tint="@color/colorIcon"/>
+                <ImageView
+                    android:id="@+id/imageAddImage"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_image"
+                    app:tint="@color/colorIcon"/>
+                <ImageView
+                    android:id="@+id/imageAddWebLink"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_web_link"
+                    app:tint="@color/colorIcon"/>
+
+            </LinearLayout>
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

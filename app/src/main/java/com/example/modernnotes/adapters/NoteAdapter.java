@@ -80,10 +80,10 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
         }
         void setNote(Note note){
             textTitle.setText(note.getTitle());
-            if (note.getSubtitle().trim().isEmpty()){
+            if (note.getNoteText().trim().isEmpty()){
                 textSubtitle.setVisibility(View.GONE);
             }else {
-                textSubtitle.setText(note.getSubtitle());
+                textSubtitle.setText(note.getNoteText());
             }
             if (note.getColor().equals("#fafafa")){
                 textTitle.setTextColor(Color.parseColor("#1f1f1f"));

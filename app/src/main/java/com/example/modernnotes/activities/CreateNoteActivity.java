@@ -83,7 +83,7 @@ public class CreateNoteActivity extends AppCompatActivity {
         imageNote=findViewById(R.id.imageNote);
         textWebURL=findViewById(R.id.textWebURL);
         layoutWebURL=findViewById(R.id.layoutWebURL);
-
+        inputNoteTitle.requestFocus();
 
         textTateTime.setText(new SimpleDateFormat("EEEE, dd MMMM yyyy HH:mm a", Locale.getDefault()).format(new Date()));
 

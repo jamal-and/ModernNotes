@@ -12,7 +12,7 @@
     
     <color name="colorSearchIcon">#fafafa</color>
     <color name="colorTextHint">#9F9F9F</color>
-    <color name="colorQuickActionBackground">#252525</color>
+    <color name="colorQuickActionBackground">#f2323232</color>
     <color name="colorIcon">#fafafa</color>
     <color name="colorSubTitle">#fafafa</color>
     <color name="colorDefaultNoteColor">#303030</color>
